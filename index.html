@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo SASS</title>
+
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+<body class="body">
+    <header class="header">
+        <h1 class="header__title">Aprendiendo SASS</h1>
+    </header>
+
+    <main class="main">
+        <div class="main__sintaxis">
+            <h2 class="sintaxis__title">Primera clase de SASS - Sintaxis del SASS - SCSS</h2>
+            <p class="sintaxis__paragraph">Primero que todo debemos debemos de saber que hay dos maneras de poder crear un archivo SASS, la primera y mas antigüa es con <code>.sass</code> y la que nosotros trabajaremos y es la más actual es la de <code>.scss</code></p>
+
+            <p class="sintaxis__paragraph">Ahora que ya sabemos esto, es importante saber que en este modo de extención se utilizan casi la misma sintaxis que en CSS PURO, es decir por lo momentos sabremos que se deben utilizar las llaves <code>{ }</code> para avisar donde comienza y termina las declaraciones que tienen cada una de los elementos con que estemos trabajando. <br>
+            También debemos de saber que una forma de ingresar a elementos que estan dentro de otros elementos con el CSS PURO, es llamando al elemento padre y luego llamando al elemento hijo cuantas veces sea necesario hasta poder llegar al elemento que nosotros querramos modificar. Esto con SASS no es necesario, con SASS podremos hacer uso del <code>scope</code> del padre para incluir ahí los elementos que querramos tocar. Y lo mas genial de esto que es dento del mismo <code>scope</code> del que estamos trabajando podemos trabajar con pseudoelementos y estos se declaran de la siguiente manera <br>
+        <code>&:hover{}</code></p>
+
+
+        </div>
+
+        <div class="main__connect">
+            <h2 class="connect__title">Como conectar tu hoja de SASS con el HTML</h2>
+            <ol class="connect__list">
+                <li class="connect__item">Debemos de ingresar a nuestra consola de comando</li>
+
+                <li class="connect__item">Dirigirnos a la carpeta donde tenemos el proyectos en el que estemos trabajando</li>
+
+                <li class="connect__item">Una vez que ya estemos en la carpeta que tenga los archivos de SASS y el CSS que querramos, nosotros debemos ejecutar en la consola de comandos la siguiente linea de código: <code>sass nombreDelArchivo.scss:nombreDelArchivo.css</code></li>
+
+                <li class="connect__item">YA que hayamos ejecutado esa linea se nos habrá creado otro archivo y se habrá fucionado ambos archivos, de esa manera ahora nosotros podemos realizar cambios en el archivo de SCSS y se vera reflejados</li>
+                <li class="connect__item">Pero una vez que nosotros tengas una actualización, debemos de repetir todo el proceso por que no cuenta con auto-actualización, también tenemos una linea para la consola de comandos</li>
+
+                <li class="connect__item">Y es la siguiente: sass --watch nombreDelArchivo.scss:nombreDelArchivo.css Y si por alguna razón deja de fallar esto debemos hacer lo siguiente</li>
+                <li class="connect__item">Debemos de cerrar la orden con la consola de comando con <code>control + C</code> y volver a repetir el cógio sass --watch</li>
+
+            </ol>
+        </div>
+
+        <div class="main__variable">
+            <h2 class="variable__title">Como crear variables en SASS</h2>
+            
+            <p class="variable__paragraph">Las variables son muy utiles para poder nosotros hacer cambios de forma global, modificando un solo elemento que tengamo guardado, en el CSS PURO, lo hacemos tocando el ::ROOT y anteponiendo dos guiones(--) dejante del nombre de la variable, pero con SASS se nos simplifica mucho el trabajo, ya que solamente debemos de declararlas a nivel global y anteponerla con un signo de $, es decir quedaria de la siguiente manera: <br>
+                <code>$colorPrimary: #f2f2f2;</code></p>
+            <p class="variable__paragraph"></p>
+        </div>
+
+        <div class="main__organization">
+            <h2 class="organization__title">Como organizar nuestro proyecto si tenemos varios archivos</h2>
+            <p class="organization__paragraph">Para organizar varios archivos de un mismo proyecto con CSS PURO, teniamos dos opciones la primera hacer cuantos archivos fueran necesarios para aplicar los estilos y la otra manera es hacer los archivos y hacer un importanción directa en la hoja del CSS de esta manera queda una sola ruta de CSS carga en el HTML y todos los archivos quedan es dentro del CSS. <br>
+            De esta última manera es que nosotros vamos a trabajar con las incorporaciones de varias hojas de estilos con SASS, y haremos lo siguiente:</p>
+            <ul class="organization__list">
+                <li class="organization__item">Primero vamos a crear los archivos y le vamos anteponer en el nombre un guión bajo (_) es muy importante ponerselo, por que de esa manera es que va a interpretar que estamos creando una nueva hoja que no es primaria.</li>
+                <li class="organization__item">Luego iremos a la hoja primaria de SASS y haremos la importación de la hoja, esto se hace con la siguiente declaración <code>@import "nombreDelArchivo</code></li>
+                <li class="organization__item">A la hora de haceer la importanción es importante colocar el nombreDelArchivo entre comillas dobles (" ") y sin el guión bajo, de esta manera ya tenemos la importanción lista.</li>
+                <li class="organization__item"></li>
+                <li class="organization__item"></li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
