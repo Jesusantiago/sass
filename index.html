@@ -64,6 +64,20 @@
                 <li class="organization__item"></li>
             </ul>
         </div>
+
+        <div class="main__function">
+            <h2 class="function__title">Mixins y funciones</h2>
+            <p class="function__paragraph">Nosotros al igual que en un lenguaje de programación, podremos crear funciones que no son mas que, varias variables que se guardan en una funcion (en SASS se declaran con <code>@mixinds</code>) donde nosotros podemos llamar a esa función dentro de un elemento para pasarle todas las propiedades que querramos que tenga el elemento. Y su declaración y ejecución sería de la siguiente manera. <br><br>
+            <code>@mixins border($px, $color){ <br>
+                border: $px solid $color; <br>
+            } <br>
+        .body{ <br>
+            @include border(3px, black) <br>
+        }
+            </code> </p>
+
+            <p class="function__paragraph">También es importante que sepamos que podemos pasarle varios parametros a una misma función y separarlos por coma (,).</p>
+        </div>
     </main>
 </body>
 </html>

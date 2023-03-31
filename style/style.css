@@ -2,6 +2,10 @@
   color: blue;
 }
 
+.function__paragraph {
+  border: 2px solid pink;
+}
+
 .body {
   margin: 0;
   padding: 0;

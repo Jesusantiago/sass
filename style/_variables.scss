@@ -1,3 +1,11 @@
+@mixin border($grosor, $color){
+    border: $grosor solid $color;
+}
+
 *{
     color: blue;
+}
+
+.function__paragraph{
+    @include border(2px, pink)
 }
